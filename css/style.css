@@ -1,0 +1,41 @@
+body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+h1, h2, h3, h4, .font-heading { font-family: 'Playfair Display', serif; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #5C3D2E; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #2C1E16; }
+
+/* Smooth reveal animation */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* Parallax effect for hero */
+.parallax-bg {
+    background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Preloader Animation */
+#preloader {
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+}
+
+#preloader-icon {
+    transition: transform 1.2s cubic-bezier(0.8, 0, 0.2, 1), opacity 1s ease-in-out;
+}
+
+#preloader.zoom-out-start #preloader-icon {
+    transform: scale(100);
+    opacity: 0;
+}
+
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
